@@ -1,6 +1,9 @@
 # ionic-sticky-list-dividers
 This is an approach to building sticky list headers using Ionic 
 
+### Demo of functionality
+
+http://codepen.io/chalettu/pen/qEgXOJ
 
 ### Getting Started
 
@@ -41,3 +44,13 @@ var app = angular.module('app', ["angular.ionic-sticky-list-dividers"]);
 | watch-variable | Model variable list you want to watch for changes | Yes | transactions |
 | on-scroll | Callback function in directive that monitors scroll position(Do not change)| Yes | checkPosition()|
 | delegate-handle | Handle for the scroll container | Yes | scrollHandle |
+
+### Notes and warnings
+If you noticed in the demo I posted I did :: one time binding on a few of the elements.  I highly recommend you do this because your performance will suffer and the logic behind this directive wont work as well
+
+Another note:  I havent tested this thouroughly and am not sure what will happen if you try to include more than one list inside of a single controller.  
+
+I also wanted to give credit to the developers on this thread
+http://forum.ionicframework.com/t/sticky-list-headers/689/38
+
+for the majority of the code I used to put all this together

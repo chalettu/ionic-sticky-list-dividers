@@ -1,4 +1,4 @@
-var myApp=  angular.module('angular.ionic-sticky-list-dividers', ['ionic','angular.filter'])
+angular.module('angular.ionic-sticky-list-dividers', ['ionic','angular.filter'])
 .directive("onRepeatDone", function ($timeout) {
     return {
         restriction: 'A',
