@@ -3,7 +3,7 @@ This is an approach to building sticky list headers using Ionic
 
 ### Demo of functionality
 
-http://codepen.io/chalettu/pen/qEgXOJ
+http://codepen.io/chalettu/full/qEgXOJ/
 
 ### Getting Started
 
@@ -48,7 +48,7 @@ var app = angular.module('app', ["angular.ionic-sticky-list-dividers"]);
 ### Notes and warnings
 If you noticed in the demo I posted I did :: one time binding on a few of the elements.  I highly recommend you do this because your performance will suffer and the logic behind this directive wont work as well
 
-Another note:  I havent tested this thouroughly and am not sure what will happen if you try to include more than one list inside of a single controller.  
+Another note:  I havent tested this thouroughly and am not sure what will happen if you try to include more than one list inside of a single controller.
 
 I also wanted to give credit to the developers on this thread
 http://forum.ionicframework.com/t/sticky-list-headers/689/38
