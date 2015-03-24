@@ -1,0 +1,26 @@
+{
+  "name": "ionic-sticky-list-dividers",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chalettu/ionic-sticky-list-dividers",
+  "authors": [
+    "Chris Hale"
+  ],
+  "description": "This is an approach to building sticky list headers using Ionic",
+  "main": "src/sticky.js",
+  "keywords": [
+    "Ionic",
+    "Ion-list"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/js/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-filter": "~0.5.4"
+  }
+}

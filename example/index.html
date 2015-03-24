@@ -1,0 +1,36 @@
+<html ng-app="stickyDividers">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>Sticky Dividers</title>
+
+  <link href="http://code.ionicframework.com/1.0.0-beta.11/css/ionic.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/1.0.0-rc.1/js/ionic.bundle.min.js"></script>
+    <script src="angular-filter.min.js"></script>
+
+</head>
+
+<body ng-controller="TestController">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Sticky Dividers</h1><button ng-click="buttonClick()"> change list</button>
+  </ion-header-bar>
+
+  <ion-content delegate-handle="scrollHandle" on-scroll="checkPosition()" sticky watch-variable="transactions">
+    <div class="list">
+ <div class="transaction-list item-container"
+                 ng-repeat="group in transactions  | groupBy: 'Day' | toArray:true | orderBy:'$key' : true   "
+                 id="gr_k_{{group.$key}}" on-repeat-done="eventTransactionsRendered">
+                <div class="item item-divider">{{::group.$key}}</div>
+                <div class="item transaction-item" ng-repeat="transaction in ::group">
+                    <a ng-click="open(transaction)" class="navigate-right">                       
+                                {{::transaction.name}} 
+                    </a>
+                </div>
+            </div>
+</div>
+  </ion-content>
+    <script src="../src/sticky.js"></script>
+</body>
+</html>
