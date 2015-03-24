@@ -31,6 +31,7 @@ var myApp=  angular.module('angular.ionic-sticky-list-dividers', ['ionic','angul
         restrict: 'A',
 
         link: function (scope, element, attrs, ctrl) {
+            scope.container_el=attrs.delegateHandle;
 
  			scope.$watch(
                 attrs.watchVariable,
@@ -100,10 +101,9 @@ var myApp=  angular.module('angular.ionic-sticky-list-dividers', ['ionic','angul
 
 
             scope.checkPosition = function () {
-
                 var i = 0,
                     topElement, offscreenElement, topElementBottom,
-                    currentTop = $ionicScrollDelegate.$getByHandle('scrollHandle').getScrollPosition().top;
+                    currentTop = $ionicScrollDelegate.$getByHandle(scope.container_el).getScrollPosition().top;
 
                 topElement = items[0];
                 var delta = items[0].listOffset;
